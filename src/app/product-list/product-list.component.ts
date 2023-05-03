@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { productos } from '../productos';
 
 @Component({
   selector: 'app-product-list',
@@ -8,10 +8,13 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
+  productos = [...productos];
 
-  share() {
-    window.alert('The product has been shared!');
+  compartir() {
+    window.alert('El producto ha sido compartido!');
+  }
+  onNotificarme() {
+    window.alert('Está siendo notificado que el producto está en venta');
   }
 }
 
